@@ -36,6 +36,7 @@ public class CalculateMassController {
         Resultado resultado = null;
         try {
             resultado = massCalcService.calcMass(usuario);
+
             return ResponseEntity.ok(resultado);
         } catch (Exception e) {
             ErrorCalc errorCalc = new ErrorCalc(usuario);
